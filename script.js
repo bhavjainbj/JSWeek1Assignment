@@ -1,5 +1,12 @@
+var closebtn = document.getElementById("btnClose");
+var deletebtn = document.getElementById("btnDelete");
+
+closebtn.hidden = true;
+deletebtn.hidden = true;
+
 
 function checkForBlank(){
+    
     
 
     if(document.getElementById('desc').value == ""){
@@ -22,6 +29,9 @@ function checkForBlank(){
 
         var y = document.getElementById("ass").value;
         document.getElementById("assOp").innerHTML = y;
+
+        closebtn.hidden = false;
+        deletebtn.hidden = false;
 
         document.getElementById("desc").value = "";
         document.getElementById("ass").value = "";
