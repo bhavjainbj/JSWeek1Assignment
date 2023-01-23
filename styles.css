@@ -1,0 +1,34 @@
+.container1{
+    margin: 20px;
+    margin-top: 3rem;
+    height: 30rem;
+    background-color: rgb(225, 223, 223);
+    border-radius: 10px;
+    padding: 40px 40px 40px 40px;
+    font-family: 'Work Sans', sans-serif;
+}
+.container1 h3{
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.container1 p{
+    font-size: 18px;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+    font-weight: bold;
+}
+
+.container1 button{
+    margin-top: 1.5rem;
+}
+
+.container2{
+    margin: 20px;
+    margin-top: 3rem;
+    height: 10rem;
+    background-color: rgb(225, 223, 223);
+    border-radius: 10px;
+    padding: 40px 40px 40px 40px;
+    font-family: 'Work Sans', sans-serif;
+}
