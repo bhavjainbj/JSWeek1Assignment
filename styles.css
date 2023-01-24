@@ -1,78 +1,221 @@
-.container1{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    scroll-behavior: smooth;
+}
+
+.container1 {
+    background-color: #023047;
+    color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 5px;
+}
+
+hr {
+    color: #8ecae6;
+    width: 100vw;
     margin: 20px;
-    margin-top: 3rem;
-    height: 30rem;
-    background-color: rgb(225, 223, 223);
-    border-radius: 10px;
-    padding: 40px 40px 40px 40px;
-    font-family: 'Work Sans', sans-serif;
-}
-.container1 h3{
-    font-weight: bold;
-    margin-bottom: 2rem;
 }
 
-.container1 p{
-    font-size: 18px;
-    margin-top: 1rem;
-    margin-bottom: .5rem;
-    font-weight: bold;
-}
-
-.container1 button{
-    margin-top: 1.5rem;
-}
-
-.NewCards{
+h1 {
     margin: 20px;
-    margin-top: 3rem;
-    height: 20rem;
-    width: 20rem;
-    background-color: rgb(225, 223, 223);
+    font-size: 3rem;
+}
+
+h2 {
+    margin: 10px;
+    font-size: 2.3rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+    margin: 10px 0px;
+
+}
+
+
+
+.sticky-div { 
+    
+    background-color: #fb8600a4;
+    color: white;    
+    width: 100%;
+    display: flex;
+    justify-content: center;    
+    height: 3rem;
+    
+    
+}
+
+.sticky-div h3{
+    font-size: 1.3rem;  
+    margin-top: .5rem;  
+}
+
+.issue-form {
+    background-color: #cccfd0;
+    color: black;
+    width: 70vw;
+    padding: 30px 15px;
     border-radius: 10px;
-    padding: 20px 10px 10px 10px;
-    font-family: 'Work Sans', sans-serif;
+    margin-bottom: 10px;
 }
 
-.InDev{
-    margin: 20px;
-    margin-top: 3rem;
-    height: 20rem;
-    width: 20rem;
-    background-color: rgb(225, 223, 223);
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input,
+select {
+    border: 2px solid black;
+    height: 40px;
+    margin: 5px 0;
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+
+label {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+#btn-add {
+    width: 75px;
+    height: 40px;
+    margin-left: 30vw;
+    background-color: #01579b;
+    color: white;
+    padding: 2px, 5px;
+    margin-block: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.issues-container {
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     border-radius: 10px;
-    padding: 20px 10px 10px 10px;
-    font-family: 'Work Sans', sans-serif;
+    gap: 15px;
+    margin-block: 10px;
 }
 
-.QA{
-    margin: 20px;
-    margin-top: 3rem;
-    height: 20rem;
-    width: 20rem;
-    background-color: rgb(225, 223, 223);
+.issue-state {
+    width: 25%;
+    background-color: #cccfd0;
     border-radius: 10px;
-    padding: 20px 10px 10px 10px;
-    font-family: 'Work Sans', sans-serif;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    align-items: center;
+    gap: 5px;
+    min-height: 50vh;
+    max-height: 85vh;
 }
 
-.Done{
-    margin: 20px;
-    margin-top: 3rem;
-    height: 20rem;
-    width: 20rem;
-    background-color: rgb(225, 223, 223);
+.issue-card {
+    width: 95%;
+    margin-inline: 5px;
+    margin-block: 5px;
+    background-color: white;
+    color: black;
     border-radius: 10px;
-    padding: 20px 10px 10px 10px;
-    font-family: 'Work Sans', sans-serif;
+    padding: 10px;
+    box-shadow: #023047;
+    box-shadow: 3px 3px #02304778;
 }
 
-.NewCards .badge{
-    padding: 5px;
-    margin-bottom: 1rem;
-    background-color: rgb(11, 185, 238);
+.open {
+    background-color: #03a9f4;
+    color: white;
+    padding: 2px 4px;
+    width: 60px;
+    text-align: center;
+    border-radius: 5px;
+    margin-block: 10px;
+    cursor: pointer;
 }
 
-.NewCards .Npara{
-    display: inline;
+.close1 {
+    background-color: #eecc22;
+    color: white;
+    padding: 4px;
+    width: 70px;
+    height: 30px;
+    text-align: center;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.delete {
+    background-color: #f44336;
+    color: white;
+    padding: 4px;
+    width: 70px;
+    height: 30px;
+    text-align: center;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.card-text {
+    margin-block: 5px;
+}
+
+h4 {
+    font-size: 1.1rem;
+}
+
+.action-palette {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 15px;
+}
+
+i {
+    font-size: 1.5rem;
+}
+
+.prev-btn,
+.next-btn {
+    cursor: pointer;
+}
+
+#closed-issues-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #cccfd0;
+    min-height: 30vh;
+
+}
+
+.closed-issue {
+    width: 25%;
 }

@@ -6,8 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> -->
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Document</title>
@@ -15,99 +14,60 @@
 
 <body>
 
-
     <div class="container1">
-        <form action="#" name="myform" method="post">
-            <h3>Add New Issue</h3>
-            <p>Description</p>
-            <input id="desc" placeholder="Describe the issue.." class="form-control" id="exampleFormControlTextarea1"
-                rows="1" type="text"></input>
-            <p>Severity</p>
-            <select class="form-control" id="sev" onchange="onSevClick(this)">
-                <option>Low</option>
-                <option>Medium</option>
-                <option>High</option>
-            </select>
-            <p>Assigned To</p>
-            <input id="ass" placeholder="Enter responsible.." class="form-control" id="exampleFormControlTextarea1"
-                rows="1" type="text"></input>
-            <button type="button" onclick="return checkForBlank()" class="btn btn-primary">Add</button>
-        </form>
+        <h1 style="margin-bottom: 3rem;">ISSUE TRACKER</h1>
+        <div class="issue-form">
+            <h3>ADD A NEW ISSUE</h3>
+            <form action="#current-issue" id="issue-form">
+                <label for="title">TITLE</label>
+                <input type="text" id="title" placeholder="Enter the title for issue..." required>
+                <label for="description">DESCRIPTION</label>
+                <input type="text" id="description" placeholder="Desrcibe the issue..." required>
+                <label for="severity">SEVERITY</label>
+                <select name="severity" id="severity" required>
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+                <label for="assigned-to">ASSIGNED TO</label>
+                <input type="text" id="assigned-to" placeholder="Enter responsible..." required>
+                <button class="btn" id="btn-add" type="submit">Add</button>
+            </form>
+        </div>
+        <hr>
+        <h2 id="current-issues">CURRENT ISSUES</h2>
+        <div class="issues-container">
+            <div class="issue-state" id="new-state">
+                <div class="sticky-div">
+                    <h3>NEW</h3>
+                </div>
 
+            </div>
+            <div class="issue-state" id="development-state">
+                <div class="sticky-div">
+                    <h3>IN DEVELOPMENT</h3>
+                </div>
+
+            </div>
+            <div class="issue-state" id="qa-state">
+                <div class="sticky-div">
+                    <h3>QA</h3>
+                </div>
+            </div>
+            <div class="issue-state" id="done-state">
+                <div class="sticky-div">
+                    <h3>FINISHED</h3>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <h2 id="closed-issues">CLOSED ISSUES</h2>
+        <div class="issues-container" id="closed-issues-container">
+
+        </div>
+    </div>
     </div>
 
-    <table>
-        <tr>
-            <td>
-                <div class="NewCards" style="font-size: small;">
-                    <p id="NidName" class="Npara">Issue ID: </p>
-                    <p class="Npara" id="id"></p><br>
-                    <span id="Nbadge" class="badge badge-secondary">Open</span>
-                    <h2 id="NdescOp"></h2>
-                    <p id="NsevOp"></p>
-                    <p id="NassOp"></p>
-                    <button type="button" id="NbtnDelete" class="btn btn-danger">Delete</button>
-                    <button type="button" id="NbtnNext" class="btn btn-warning">Next</button>
-
-                </div>
-            </td>
-            <td>
-                <div class="InDev" style="font-size: small;">
-                    <p id="IidName" class="Ipara">Issue ID: </p>
-                    <p class="Ipara" id="id"></p><br>
-                    <span id="Ibadge" class="badge badge-secondary">Open</span>
-                    <h2 id="IdescOp">
-                        </h1>
-                        <p id="IsevOp"></p>
-                        <p id="IassOp"></p>
-                        <button type="button" id="IbtnDelete" class="btn btn-danger">Delete</button>
-                        <button type="button" id="IbtnNext" class="btn btn-warning">Next</button>
-
-                </div>
-            </td>
-            <td>
-                <div class="QA" style="font-size: small;">
-                    <p id="QidName" class="Qpara">Issue ID: </p>
-                    <p class="Qpara" id="id"></p><br>
-                    <span id="Qbadge" class="badge badge-secondary">Open</span>
-                    <h2 id="QdescOp">
-                        </h1>
-                        <p id="QsevOp"></p>
-                        <p id="QassOp"></p>
-                        <button type="button" id="QbtnDelete" class="btn btn-danger">Delete</button>
-                        <button type="button" id="QbtnNext" class="btn btn-warning">Next</button>
-
-                </div>
-            </td>
-            <td>
-                <div class="Done">
-                    <p id="DidName" class="Dpara">Issue ID: </p>
-                    <p class="Dpara" id="id"></p><br>
-                    <span id="Dbadge" class="badge badge-secondary">Open</span>
-                    <h2 id="DdescOp">
-                        </h1>
-                        <p id="DsevOp"></p>
-                        <p id="DassOp"></p>
-                        <button type="button" id="DbtnDelete" class="btn btn-danger">Delete</button>
-                        <button type="button" id="DbtnNext" class="btn btn-warning">Next</button>
-
-                </div>
-            </td>
-        </tr>
-    </table>
-
-
-    <!-- <div class="container2">
-        <p id="idName" class="para">Issue ID: </p>
-        <p class="para" id="id"></p><br>
-        <span id="badge" class="badge badge-secondary">Open</span>
-        <h2 id="descOp"></h1>
-        <p id="sevOp"></p>
-        <p id="assOp"></p>
-        <button type="button" id="btnNext" class="btn btn-warning">Next</button>    
-        <button type="button" id="btnDelete" class="btn btn-danger">Delete</button>
-
-    </div> -->
 
 
     <!-- JAVASCRIPT BEGIN -->
@@ -118,7 +78,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
         integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
         crossorigin="anonymous"></script>
-
+    <script src="https://kit.fontawesome.com/906b3f56ce.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 
     <!-- JAVASCRIPT END -->
