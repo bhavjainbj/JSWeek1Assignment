@@ -1,21 +1,21 @@
-// var Nextbtn = document.getElementById("btnNext");
-// var deletebtn = document.getElementById("btnDelete");
-// var badge = document.getElementById("badge");
-// var idName = document.getElementById("idName");
+// var Nextbtn = document.getElementById("NbtnNext");
+// var deletebtn = document.getElementById("NbtnDelete");
+// var Nbadge = document.getElementById("Nbadge");
+// var NidName = document.getElementById("NidName");
 
-// var DNextbtn = document.getElementById("DbtnNext");
-// var Ddeletebtn = document.getElementById("DbtnDelete");
-// var Dbadge = document.getElementById("Dbadge");
-// var DidName = document.getElementById("DidName");
+// var DNextbtn = document.getElementById("DNbtnNext");
+// var Ddeletebtn = document.getElementById("DNbtnDelete");
+// var DNbadge = document.getElementById("DNbadge");
+// var DNidName = document.getElementById("DNidName");
 
 // Nextbtn.hidden = true;
 // deletebtn.hidden = true;
-// badge.hidden = true;
-// idName.hidden = true;
+// Nbadge.hidden = true;
+// NidName.hidden = true;
 
 
-// Dbadge.hidden = true;
-// DidName.hidden = true;
+// DNbadge.hidden = true;
+// DNidName.hidden = true;
 
 // let guid = () => {
 //     let s4 = () => {
@@ -42,28 +42,28 @@
 //         return false;
 //     }
 //     else{
-//         idName.hidden = false;
-//         DidName.hidden = false;
+//         NidName.hidden = false;
+//         DNidName.hidden = false;
 
 //         var i = guid();
 //         document.getElementById("id").innerHTML = i;
 //         // document.getElementById("Did").innerHTML = i;
 
-//         badge.hidden = false;
-//         Dbadge.hidden = false;
+//         Nbadge.hidden = false;
+//         DNbadge.hidden = false;
 
 //         var x = document.getElementById("desc").value;
-//         document.getElementById("descOp").innerHTML = x;        
-//         // document.getElementById("DdescOp").innerHTML = x;        
+//         document.getElementById("NdescOp").innerHTML = x;        
+//         // document.getElementById("DNdescOp").innerHTML = x;        
 
 //         var sel = document.getElementById("sev");
 //         var text= sel.options[sel.selectedIndex].text;
-//         document.getElementById("sevOp").innerHTML = text;
-//         // document.getElementById("DsevOp").innerHTML = text;
+//         document.getElementById("NsevOp").innerHTML = text;
+//         // document.getElementById("DNsevOp").innerHTML = text;
 
 //         var y = document.getElementById("ass").value;
-//         document.getElementById("assOp").innerHTML = y;
-//         // document.getElementById("DassOp").innerHTML = y;
+//         document.getElementById("NassOp").innerHTML = y;
+//         // document.getElementById("DNassOp").innerHTML = y;
 
 //         Nextbtn.hidden = false;
 //         deletebtn.hidden = false;
@@ -78,15 +78,15 @@
 
 
 
-var closebtn = document.getElementById("btnClose");
-var deletebtn = document.getElementById("btnDelete");
-var badge = document.getElementById("badge");
-var idName = document.getElementById("idName");
+var Nextbtn = document.getElementById("NbtnNext");
+var deletebtn = document.getElementById("NbtnDelete");
+var Nbadge = document.getElementById("Nbadge");
+var NidName = document.getElementById("NidName");
 
-closebtn.hidden = true;
+Nextbtn.hidden = true;
 deletebtn.hidden = true;
-badge.hidden = true;
-idName.hidden = true;
+Nbadge.hidden = true;
+NidName.hidden = true;
 
 let guid = () => {
     let s4 = () => {
@@ -113,24 +113,24 @@ function checkForBlank(){
         return false;
     }
     else{
-        idName.hidden = false;
+        NidName.hidden = false;
         
         var i = guid();
         document.getElementById("id").innerHTML = i;
 
-        badge.hidden = false;
+        Nbadge.hidden = false;
 
         var x = document.getElementById("desc").value;
-        document.getElementById("descOp").innerHTML = x;        
+        document.getElementById("NdescOp").innerHTML = x;        
 
         var sel = document.getElementById("sev");
         var text= sel.options[sel.selectedIndex].text;
-        document.getElementById("sevOp").innerHTML = text;
+        document.getElementById("NsevOp").innerHTML = text;
 
         var y = document.getElementById("ass").value;
-        document.getElementById("assOp").innerHTML = y;
+        document.getElementById("NassOp").innerHTML = y;
 
-        closebtn.hidden = false;
+        Nextbtn.hidden = false;
         deletebtn.hidden = false;
 
         document.getElementById("desc").value = "";
